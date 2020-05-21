@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leader board</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="css/leaderboard.css") }}">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+<body>
+<h1>Leaders</h1>
+
+<div class="first">
+    <div class="container">
+        <div class="name">
+            {{ players[0].name }}
+        </div>
+        <div class="time">
+            <p>{{ players[0].time }}</p>
+        </div>
+    </div>
+</div>
+<div class="second">
+    <div class="container">
+        <div class="name">
+            {{ players[1].name }}
+        </div>
+        <div class="time">
+            <p>{{ players[1].time }}</p>
+        </div>
+    </div>
+</div>
+<div class="third">
+    <div class="container">
+        <div class="name">
+            {{ players[2].name }}
+        </div>
+        <div class="time">
+            <p>{{ players[2].time }}</p>
+        </div>
+    </div>
+</div>
+
+
+<table>
+    {% for i in range(3,len) %}
+        <tr class="remain">
+            <td class="name">{{ players[i].name }}</td>
+            <td class="time">{{ players[i].time }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<div>
+    <div class="container">
+        <div>
+
+        </div>
+        <div>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        times = $(".time>p").css("width", "50%");
+        ;
+
+        for (time in times) {
+            time.
+        }
+
+
+    });
+</script>
+</body>
+</html>
